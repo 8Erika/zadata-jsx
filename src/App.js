@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  const name = ["Ivan", "Luka", "Mihael"];
+  const number = ["8", "9"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <p>Danas je ponedjeljak!</p>
+      <p>Muška imena: {name.map((i) => i.toString() + " ")}</p>
+      <p>
+        Dečki:
+        {name.map((name) => (
+          <span>
+            {name}
+            {name.length - 1 && ","}
+          </span>
+        ))}{" "}
+        imaju isti najdraži broj{" "}
+        {number.map((number) => (
+          <span>{number}</span>
+        ))}
+      </p>
+    </>
   );
 }
 
