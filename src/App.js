@@ -7,19 +7,12 @@ function App() {
   return (
     <>
       <p>Danas je ponedjeljak!</p>
-      <p>Muška imena: {name.map((i) => i.toString() + " ")}</p>
+      <p>Muška imena: {name.join(", ")}</p>
       <p>
         Dečki:
-        {name.map((name) => (
-          <span>
-            {name}
-            {name.length - 1 && ","}
-          </span>
-        ))}{" "}
-        imaju isti najdraži broj{" "}
-        {number.map((number) => (
-          <span>{number}</span>
-        ))}
+        {name.join(", ")}
+        {" "}
+        imaju isti najdraži broj {number.join(", ")}
       </p>
     </>
   );
